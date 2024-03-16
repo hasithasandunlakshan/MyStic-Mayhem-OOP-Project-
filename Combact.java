@@ -1,3 +1,4 @@
+
 public class Combact {
     GameName game = new GameName();
 
