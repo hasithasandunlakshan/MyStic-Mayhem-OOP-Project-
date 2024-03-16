@@ -24,5 +24,9 @@ public class main {
             game.animatePrint("You Left the Battle", GameName.ANSI_RED);
         }
 
+        System.out.println("Game Over");
+        
+
     }
+    
 }
