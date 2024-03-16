@@ -1,7 +1,7 @@
 
 public class GameName {
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
+    public final static String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
@@ -23,19 +23,21 @@ public class GameName {
         System.out.println();
     }
 
-    private void animatePrintSlow(String text, String color) {
-        System.out.print(color);
-        for (char c : text.toCharArray()) {
-            System.out.print(c);
-            try {
-                Thread.sleep(50); // Adjust the delay as needed
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.print(ANSI_RESET); // Reset color after printing
-        System.out.println();
-    }
+    /*
+     * private void animatePrintSlow(String text, String color) {
+     * System.out.print(color);
+     * for (char c : text.toCharArray()) {
+     * System.out.print(c);
+     * try {
+     * Thread.sleep(50); // Adjust the delay as needed
+     * } catch (InterruptedException e) {
+     * e.printStackTrace();
+     * }
+     * }
+     * System.out.print(ANSI_RESET); // Reset color after printing
+     * System.out.println();
+     * }
+     */
 
     public void blinkText(String text, int repeat, int durationMillis, String color) {
         try {
